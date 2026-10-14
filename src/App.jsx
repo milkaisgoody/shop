@@ -8,6 +8,7 @@ import ProductInfo from './products/ProductInfo'
 import AddProduct from './products/AddProduct'
 import SignIn from './users/SignIn'
 import { useState } from 'react'
+import SignUp from './users/SignUp'
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -43,6 +44,7 @@ function App() {
               <Route path='/products/:id' element={<ProductInfo />} />
               <Route path='/add-product' element={<AddProduct />} />
               <Route path='/signin' element={<SignIn onLogin={handleLogin} />} />
+              <Route path='/signup' element={<SignUp />} />
             </Routes>
           </div>
         </BrowserRouter>

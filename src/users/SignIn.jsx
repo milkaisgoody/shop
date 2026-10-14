@@ -1,6 +1,7 @@
 import { useState } from "react";
 import users from "../datas/users"
 import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const SignIn = ({onLogin}) => {
     const [formData, setFormData] = useState({
@@ -80,6 +81,11 @@ const SignIn = ({onLogin}) => {
                     </li>
                 </ul>
             </form>
+            {/* 회원가입 링크 */}
+            <p className="signup-link">
+                아직 계정이 없으신가요? <Link to="/signup">회원가입</Link>
+            </p>
+
             {/* 결과 메시지 출력 */}
             {/* {result === "success" && (
                 <p style={{color: "blue"}}>환영합니다.</p>
